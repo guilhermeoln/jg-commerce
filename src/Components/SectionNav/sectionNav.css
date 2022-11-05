@@ -1,0 +1,39 @@
+.navOn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid rgb(234, 234, 234);
+    background-color: #FFF;
+    box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%), 0 1px 5px 0 rgb(0 0 0 / 12%);
+}
+
+
+.navOn a{
+    text-decoration: none;
+    color: rgb(141, 153, 174);
+    font-weight: 400;
+    font-size: 15px;
+    margin-right: 25px;
+    transition: ease all 0.2s;
+}
+
+
+.navOn a:hover{
+    color: rgb(209, 0, 36);
+    transition: ease all 0.3s;
+    transform: translateX(2px) scale(1.2);
+}
+
+.navOff{
+    display: none;
+}
+
+
+@media(max-width: 900px){
+    .navOn a{
+        margin-right: 15px;
+        font-size: 12px;
+    }
+}

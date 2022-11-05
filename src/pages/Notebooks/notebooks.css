@@ -1,0 +1,41 @@
+.containerNotebooks{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 120vh;
+    align-items: center;
+}
+
+.rowNotebooks{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+}
+
+ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    list-style: none;
+}
+
+@media(max-width: 900px){
+    .containerNotebooks{
+        height: 100%;
+    }
+
+    .rowNotebooks{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    ul{
+        flex-direction: column;
+        height: 100%;
+    }
+}

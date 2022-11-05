@@ -1,0 +1,46 @@
+.containerCelulares{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 120vh;
+    align-items: center;
+}
+
+.rowCelulares{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+}
+
+.rowCelulares ul{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    list-style: none;
+}
+
+
+@media(max-width: 900px){
+    .containerCelulares{
+        height: 100%;
+    }
+
+    .rowCelulares{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+    }
+
+    ul{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height: 50%;
+    }
+    
+}
+

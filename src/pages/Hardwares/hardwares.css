@@ -1,0 +1,78 @@
+.containerHardwares{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 120vh;
+    align-items: center;
+}
+
+.rowHardwares{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 45%;
+}
+
+ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    list-style: none;
+}
+
+.pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+}
+
+.pagination button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    padding: 8px;
+    margin-right: 5px;
+    cursor: pointer;
+    box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%), 0 1px 5px 0 rgb(0 0 0 / 12%);
+}
+
+.btnOff:hover{
+    background-color: rgba(255, 0, 0, 0.668);
+    transition: ease all 0.3s;
+}
+
+.btnOn{
+    background-color: red;
+    color: white;
+}
+
+@media(max-width: 900px){
+    .containerHardwares{
+        height: 100%;
+    }
+
+    .rowHardwares{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .pagination{
+        height: 10%;
+        margin: 30px 0px 10px 0px;
+    }
+
+    ul{
+        flex-direction: column;
+        height: 100%;
+    }
+}

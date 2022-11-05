@@ -1,0 +1,291 @@
+.containerHome{
+    width: 100%;
+    height: 1300px;
+}
+
+.containerLoadingHome{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+
+.containerCardsHome{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 300px;
+}
+
+.cardHome{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    height: 80%;
+    margin-right: 25px;
+    box-shadow: 1px 1px 3px 1px rgb(0 0 0 / 20%);
+    border-radius: 3px;
+}
+
+.imgCardHome{
+    display: flex;
+    width: 100%;
+    height: 70%;
+}
+
+.imgCardHome img{
+    width: 100%;
+}
+
+
+.titleCardHome{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 30%;
+    background-color: rgba(209, 0, 35, 0.932);
+    border-radius: 3px;
+}
+
+.titleCardHome h2{
+    color: #FFF;
+    font-size: 20px;
+}
+
+.titleCardHome a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 7px;
+    margin-top: 5px;
+    font-size: 12px;
+    color: black;
+    background-color: #FFF;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px 1px rgb(0 0 0 / 20%);
+}
+
+.titleCardHome a:hover{
+    background-color: rgb(230, 230, 230);
+    transition: ease all 0.2s;
+}
+
+.iconArrow{
+    margin-left: 8px;
+}
+
+.containerNewProducts{
+    width: 100%;
+    height: 600px;
+}
+
+.containerNewProducts span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.titleNewProducts{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+}
+
+.titleNewProducts h2{
+    font-weight: 400;
+    font-size: 30px;
+}
+
+.contentProductsHome{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 90%;
+}
+
+.contentProductsHome ul{
+    display: flex;
+    width: 80%;
+    height: 100%;
+}
+
+
+.contentProductsHome li{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 70%;
+    padding: 0px 10px;
+    list-style: none;
+    margin-right: 20px;
+    border: 2px solid rgb(237, 237, 237);
+}
+
+.imgListaProduto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+    border-bottom: 3px solid rgb(237, 237, 237);
+}
+
+.imgListaProduto img{
+    width: 80%;
+    height: 80%;
+}
+
+.contentListaProduto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+}
+
+
+.containerPromotionsHome{
+    display: flex;
+    width: 100%;
+    height: 400px;
+    background-color: rgb(228, 231, 237);
+}
+
+.imgPromotionsHome{
+    display: flex;
+    width: 30%;
+    height: 100%;
+}
+
+.imgPromotionsHome img{
+    width: 100%;
+}
+
+.textPromotionsHome{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 100%;
+}
+
+.textPromotionsHome h2{
+    color: rgb(43, 45, 66);
+    font-size: 35px;
+}
+
+.textPromotionsHome h3{
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.textPromotionsHome a{
+    text-decoration: none;
+    text-align: center;
+    width: 20%;
+    padding: 15px;
+    margin-top: 20px;
+    background-color: rgb(209, 0, 35);
+    border-radius: 20px;
+    color: #FFF;
+    font-weight: 700;
+}
+
+.textPromotionsHome a:hover{
+    color: rgb(209, 0, 35);
+    border: 2px solid rgb(209, 0, 35);
+    background-color: transparent;
+    transition: ease all 0.4s;
+}
+
+.textPromotionsHome img{
+    width: 400px;
+    height: 200px;
+}
+
+
+
+
+/* RESPONSIVE */
+
+
+
+
+@media(max-width: 900px){
+    .containerHome{
+        height: 3500px;
+    }
+
+
+    .containerCardsHome{
+        flex-direction: column;
+        height: 1000px;
+    }
+
+    .cardHome{
+        width: 80%;
+        margin: 20px 0px 0px 0px;
+        height: 300px;
+    }
+
+    .titleNewProducts{
+        height: 10%;
+    }
+
+    .contentProductsHome{
+        height: 80%;
+        margin-top: 20px;
+    }
+
+    .containerNewProducts{
+        height: 2000px;
+    }
+
+    .contentProductsHome ul{
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .contentProductsHome li{
+        margin: 20px 0px 0px 0px;
+        width: 70%;
+        height: 100%;
+    }
+
+    .containerNewProducts button{
+        margin: 20px 0px 10px 0px;
+    }
+
+    .containerPromotionsHome{
+        height: 500px;
+    }
+    
+    .imgPromotionsHome{
+        display: none;
+    }
+
+    .textPromotionsHome{
+        width: 100%;
+    }
+
+    .textPromotionsHome h2{
+        font-size: 30px;
+    }
+}
+
+
