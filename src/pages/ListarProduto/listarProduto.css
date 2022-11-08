@@ -1,0 +1,58 @@
+.containerListarProduto{
+    width: 100%;
+    height: 3000px;
+}
+
+.rowListarProduto{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding: 10px 0px;
+    box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%), 0 1px 5px 0 rgb(0 0 0 / 12%);
+}
+
+.rowListarProduto p{
+    width: 20%;
+    text-transform: uppercase;
+}
+
+
+.rowListarProduto button{
+    width: 10%;
+    height: 30px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(209, 0, 35);
+    font-weight: 700;
+    color: #FFF;
+    cursor: pointer;
+}
+
+.rowListarProduto button:hover{
+    background-color: transparent;
+    border: 1px solid rgb(209, 0, 35);
+    color: rgb(209, 0, 35);
+    transition: ease all 0.2s;
+}
+
+.rowListarProduto span{
+    font-weight: 700;
+}
+
+@media(max-width: 900px){
+    .containerListarProduto{
+        height: 2700px;
+    }
+
+    .rowListarProduto p{
+        font-size: 10px;
+    }
+
+    .rowListarProduto button{
+        width: 18%;
+    }
+}
+

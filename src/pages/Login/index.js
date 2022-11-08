@@ -31,7 +31,7 @@ export default function Login(){
             <h2>Digite as suas credenciais</h2>
             <input type="text" placeholder='Digite seu login' />
             <input type="password" placeholder='Digite sua senha' />
-            <button>ENTRAR</button>
+            <button><Link to="/painel">ENTRAR</Link></button>
         </div>
     );
 }

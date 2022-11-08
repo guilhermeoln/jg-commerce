@@ -76,13 +76,34 @@ table img{
     background-color: rgb(209, 0, 35);
     border: 1px solid rgb(209, 0, 35);
     color: #FFF;
-    font-weight: 700;
     border-radius: 15px;
     border: none;
     cursor: pointer;
 }
 
 .infoContentCarrinho button:hover{
+    color: rgb(209, 0, 35);
+    border: 1px solid rgb(209, 0, 35);
+    background-color: transparent;
+    transition: ease all 0.5s;
+}
+
+.textCarrinhoVazio{
+    font-size: 30px;
+}
+
+.btnCarrinhoVazio{
+    width: 200px;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid rgb(209, 0, 35);
+    background-color: rgb(209, 0, 35);
+    color: #FFF;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.btnCarrinhoVazio:hover{
     color: rgb(209, 0, 35);
     border: 1px solid rgb(209, 0, 35);
     background-color: transparent;

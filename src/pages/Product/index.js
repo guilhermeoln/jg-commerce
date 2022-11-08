@@ -1,16 +1,18 @@
 import { useEffect, useContext, useState} from 'react';
 import MyContext from '../../contexts/myContext';
 import './product.css';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import api from '../../services/api';
 import { FaShoppingCart } from 'react-icons/fa';
-import { toast } from 'react-toastify';
+
 
 export default function Product(){
 
     const [productSelected, setProductSelected] = useState({});
 
     const { id } = useParams();
+
+    const navigate = useNavigate();
 
     useEffect(() =>{
 
@@ -29,7 +31,6 @@ export default function Product(){
 
     },[])
 
-    console.log(productSelected);
 
     const {
         loading,
@@ -52,9 +53,8 @@ export default function Product(){
                 quantidadeCompra: quantidadeCompra - 1
              })
         } else{
-             return;
+            return;
         }
-        console.log(quantidadeCompra)
      }
  
      function incrementCountItem(){
@@ -64,10 +64,9 @@ export default function Product(){
                 quantidadeCompra: quantidadeCompra + 1
              })
          } else{
-             return;
+            return;
          }
  
-         console.log(quantidadeCompra)
      }
 
 
@@ -85,7 +84,7 @@ export default function Product(){
                     <p>{quantidadeCompra}</p>
                     <button onClick={ incrementCountItem }>+</button>
                 </div>
-                <h4>R$ {valor}</h4>
+                <h4>R$ {valor * quantidadeCompra}</h4>
                 <button onClick={() => addToCart(id, nome, quantidade, categoria, valor, imagem, quantidadeCompra)}><FaShoppingCart className='iconCartProduct'/>ADICIONAR</button>
             </div>
         </div>

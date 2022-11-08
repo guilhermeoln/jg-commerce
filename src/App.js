@@ -5,6 +5,7 @@ import { toast } from 'react-toastify';
 import RoutesApp from "./routes";
 import MyContext from './contexts/myContext';
 
+
 function App() {
 
   const [produtos, setProdutos] = useState([]);

@@ -82,9 +82,8 @@
     height: 35px;
     margin-top: 10px;
     background-color: rgb(209, 0, 35);
-    border: 2px solid rgb(209, 0, 35);
+    border: 1px solid rgb(209, 0, 35);
     color: #FFF;
-    font-weight: 700;
     border-radius: 15px;
     border: none;
     cursor: pointer;
@@ -92,7 +91,7 @@
 
 .infoProduct button:hover{
     color: rgb(209, 0, 35);
-    border: 2px solid rgb(209, 0, 35);
+    border: 1px solid rgb(209, 0, 35);
     background-color: transparent;
     transition: ease all 0.5s;
 }
@@ -104,5 +103,12 @@
 @media(max-width: 900px){
     .imgProduct{
         justify-content: center;
+    }
+}
+
+@media(max-width: 575px){
+    .imgProduct img{
+        width: 80%;
+        transition: ease all 0.4s;
     }
 }

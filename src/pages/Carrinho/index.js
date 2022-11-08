@@ -1,18 +1,18 @@
 import './carrinho.css';
 import MyContext from '../../contexts/myContext';
-import { useContext, useEffect } from 'react';
+import { useContext } from 'react';
 import api from '../../services/api';
-import { Navigate, useNavigate } from 'react-router-dom';
-import { FaArrowLeft, FaMoneyBillAlt} from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
+import { FaArrowLeft, FaMoneyBillAlt } from 'react-icons/fa';
 
 export default function Carrinho() {
 
     const navigate = useNavigate();
 
 
-    async function realizarCompra(){
-        for(let i=0; i < productsCart.length; i++){
-            const res = await api.put(`/Produtos/${productsCart[i].id}`, { quantidade: productsCart[i].quantidade - productsCart[i].quantidadeCompra});
+    async function realizarCompra() {
+        for (let i = 0; i < productsCart.length; i++) {
+            const res = await api.put(`/Produtos/${productsCart[i].id}`, { quantidade: productsCart[i].quantidade - productsCart[i].quantidadeCompra });
             console.log(res.data)
         }
         setProductsCart([]);
@@ -20,7 +20,7 @@ export default function Carrinho() {
         window.location.reload(true);
     }
 
-    function toHome(){
+    function toHome() {
         navigate('/');
     }
 
@@ -36,7 +36,10 @@ export default function Carrinho() {
 
     return (
         <div className="containerCarrinho">
-            <div className='contentCarrinho'>
+            {productsCart.length > 0
+                ?
+                <>
+                <div className='contentCarrinho'>
                 <table key={productsCart.id}>
                     <tr>
                         <th></th>
@@ -57,10 +60,18 @@ export default function Carrinho() {
             </div>
             <div className='infoContentCarrinho'>
                 <h3>Resumo do pedido</h3>
-                <h4>Valor total:</h4>
+                <h4>Valor total: </h4>
                 <button onClick={ realizarCompra }><FaMoneyBillAlt className='icon'/>Finalizar compra</button>
                 <button onClick={ toHome }><FaArrowLeft className='icon'/>Continuar comprando</button>
             </div>
+            </>
+                :
+                <>
+                    <img src="http://2.bp.blogspot.com/-9nBg_pZYyzY/UH7f1qzoN4I/AAAAAAAAAGk/6k2ZXsJ12xc/s1600/carrinho.png" alt="carrinho" />
+                    <span className="textCarrinhoVazio">O carrinho está vazio!</span>
+                    <button className='btnCarrinhoVazio' onClick={ toHome }>Comprar agora</button>
+                </>
+            }
         </div>
     );
 }

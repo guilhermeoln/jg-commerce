@@ -11,6 +11,10 @@ import Product from "./pages/Product";
 import Notebooks from "./pages/Notebooks";
 import Hardwares from "./pages/Hardwares";
 import Carrinho from "./pages/Carrinho";
+import Painel from "./pages/Painel";
+import AdicionarProduto from "./pages/AdicionarProduto";
+import ListarProduto from "./pages/ListarProduto";
+
 
 export default function RoutesApp(){
     return(
@@ -25,6 +29,9 @@ export default function RoutesApp(){
                 <Route path="/notebooks" element={<Notebooks />} />
                 <Route path="/hardwares" element={<Hardwares />} />
                 <Route path="/carrinho" element={<Carrinho />} />
+                <Route path="/painel" element={<Painel />} />
+                <Route path="/adicionarProduto" element={<AdicionarProduto />} />
+                <Route path="/listarProduto" element={<ListarProduto />} />
             </Routes>
             <Footer />
         </BrowserRouter>
