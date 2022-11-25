@@ -110,6 +110,10 @@ table img{
     transition: ease all 0.5s;
 }
 
+.valorTotal{
+    color: rgb(209, 0, 35);
+}
+
 
 @media(max-width: 900px){
     .contentCarrinho{

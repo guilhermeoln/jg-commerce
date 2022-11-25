@@ -71,7 +71,7 @@ export default function AdicionarProduto(){
                 <input type="text" maxLength={25} placeholder="Digite o nome do produto" value={ nomeProduto } onChange={e => setNomeProduto(e.target.value)} required/>
                 <input type="text" placeholder='Insira a URL da imagem' onChange={ e => setImagemProduto(e.target.value) } required/>
                 <select value={categoriaProduto} onChange={ e => setCategoriaProduto(e.target.value)} required>
-                    <option>Hardware</option>
+                    <option>Hardwares</option>
                     <option>Celular</option>
                     <option>Notebooks</option>
                 </select>

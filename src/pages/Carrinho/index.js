@@ -1,13 +1,35 @@
 import './carrinho.css';
 import MyContext from '../../contexts/myContext';
-import { useContext } from 'react';
+import { useContext, useEffect, useState} from 'react';
 import api from '../../services/api';
 import { useNavigate } from 'react-router-dom';
 import { FaArrowLeft, FaMoneyBillAlt } from 'react-icons/fa';
 
 export default function Carrinho() {
 
+    const [valorTotal, setValorTotal] = useState(0);
+
     const navigate = useNavigate();
+
+    useEffect(() =>{
+
+        function calcularValorTotal(){
+            let valorFinal = 0;
+
+            if(productsCart.length > 0){
+                for(let i = 0; i < productsCart.length; i++){
+                    valorFinal += (productsCart[i].quantidadeCompra * productsCart[i].valor);
+                }
+                setValorTotal(valorFinal);
+            } else{
+                return
+            }
+
+        }
+
+        calcularValorTotal();
+
+    },[])
 
 
     async function realizarCompra() {
@@ -60,7 +82,7 @@ export default function Carrinho() {
             </div>
             <div className='infoContentCarrinho'>
                 <h3>Resumo do pedido</h3>
-                <h4>Valor total: </h4>
+                <h4>Valor total: <span className='valorTotal'>R${valorTotal}</span></h4>
                 <button onClick={ realizarCompra }><FaMoneyBillAlt className='icon'/>Finalizar compra</button>
                 <button onClick={ toHome }><FaArrowLeft className='icon'/>Continuar comprando</button>
             </div>
